@@ -1,0 +1,27 @@
+.search-field {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 6px;
+    color: black;
+    font-size: 10px;
+    line-height: 1.5715;
+    background-color: #e8e8e8;
+    border: 1px solid black;
+    font-family: "Press Start 2P";
+    transition: .3s;
+}
+  
+@media (max-width: 600px) {
+  .search-field {
+    width: 80%;
+  }
+}
+.search-field:hover {
+   font-size: 12px;
+   padding: 5px;
+   border-color: #fff240;
+   border-right-width: 1px !important;
+ }
+

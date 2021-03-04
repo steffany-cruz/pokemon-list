@@ -1,13 +1,21 @@
+@font-face {
+  font-family: "Press Start 2P";
+  /* src: url("./assets/fonts/DotGothic16-Regular.ttf") format("truetype"); */
+  src: url("./assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+}
+
+html {
+  font-family: "Press Start 2P";
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import './css/_pagination.css';
+@import './css/_pokemonDetail.css';
+@import './css/_pokemonList.css';
+@import './css/_searchField.css';
+@import "./App.css";

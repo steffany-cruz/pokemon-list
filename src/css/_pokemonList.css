@@ -1,0 +1,25 @@
+.list {
+  padding: 1rem;
+}
+
+.card {
+  float: left;
+  list-style: none;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+  padding: 30px;
+  cursor: pointer;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0px 6px 12px #0a1f4429;
+}
+
+.card:hover {
+  box-shadow: 7px 7px 55px 0 #0a1f4429;
+}
+.card img {
+  position: relative;
+  width: 25px;
+  margin-right: 10px;
+  top: 4px;
+}
