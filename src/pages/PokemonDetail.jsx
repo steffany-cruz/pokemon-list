@@ -1,40 +1,21 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams, withRouter } from "react-router-dom";
 import NotFound from "../components/NotFound";
-import { POKEMON_API_URL } from "../services";
+import { usePokemonContext } from "../context/PokemonContext";
 
 function PokemonDetail() {
+  const { pokemon, notFound, getPokemon } = usePokemonContext();
   let { id } = useParams();
   const history = useHistory();
-  const [pokemon, setPokemon] = useState();
-  const [notFound, setNotFound] = useState(false);
   const [visibleImg, setVisibleImg] = useState("front_default");
 
   useEffect(() => {
-    console.log(id);
     if (id) {
-      getPokemon();
+      getPokemon(id);
     } else {
       history.push("/");
     }
   }, [id]);
-
-  async function getPokemon() {
-    setNotFound(false);
-    setPokemon();
-    try {
-      const response = await axios.get(`${POKEMON_API_URL}/${id}`);
-      const { data } = response;
-      if (data.results) {
-        history.push("/");
-      }
-      setPokemon(data);
-    } catch (error) {
-      setNotFound(true);
-      console.log(error);
-    }
-  }
 
   function customBaseStat(baseStat) {
     const style = { height: "24px", width: `${(baseStat * 100) / 255}%` };
@@ -75,7 +56,7 @@ function PokemonDetail() {
           <div className="info-block">
             <div className="row-title">Type</div>
             {pokemon.types.map((type) => (
-              <div>{type.type.name}</div>
+              <div className="cell">{type.type.name}</div>
             ))}
           </div>
           <div className="info-block">
@@ -91,7 +72,7 @@ function PokemonDetail() {
           <div className="row-title">Stats</div>
           {pokemon.stats.map((stat) => (
             <div>
-              <span className="cell">{stat.stat.name} </span>
+              <div className="cell">{stat.stat.name}</div>
               <div class="stat-bar">
                 <div style={customBaseStat(stat.base_stat)} />
               </div>

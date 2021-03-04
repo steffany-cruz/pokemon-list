@@ -13,11 +13,6 @@
     transition: .3s;
 }
   
-@media (max-width: 600px) {
-  .search-field {
-    width: 80%;
-  }
-}
 .search-field:hover {
    font-size: 12px;
    padding: 5px;

@@ -15,7 +15,7 @@
 .pokemon-title {
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding-top: 2rem;
     margin: 0;
     text-transform: capitalize;
 }
@@ -35,6 +35,7 @@
 
 .pokemon-img img {
     width: 250px;
+    background-color: white;
     border-radius: 100%;
     margin-right: 10px;
     box-shadow: 10px 10px 20px 0 #413636a6;
@@ -53,7 +54,7 @@
 }
 
 .stat-bar {
-    background-color: gray;
+    background-color: white;
     width: 100%;
 }
 
@@ -87,11 +88,11 @@
 
 .cell {
     font-weight: bold;
+    margin-bottom: 5px
 }
 
 .not-found-content {
-    margin-top: 4rem;
-    justify-content: center;
+    margin: 4rem;
     text-align: center;    
 }
 
