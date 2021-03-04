@@ -18,16 +18,10 @@ Regras:
 - Deve ser funcional no navegador Google Chrome;
 - O idioma da interface deve estar em português ou inglês.
 
-Observações:
-
-- A PokéAPI não possui pesquisa relativa ou ordenação, então não se preocupe com isso na listagem;
-- Os termos retornados pela API vêm em inglês por padrão, então não se preocupe em traduzí-los caso opte pela interface em português;
-- A PokéAPI possibilita buscar mais informações interessantes sobre os pokémons através de novas requisições. Sinta-se livre para utilizá-las.
-
 Critérios técnicos:
 
 - Essenciais:
-- Código fonte escrito em inglês
+- Código fonte escrito em inglês 
 - Projeto disponível no github ou qualquer outro repositório git
 - Framework front-end
 - Sintaxe ES6
@@ -35,8 +29,8 @@ Critérios técnicos:
 - Layout responsivo
 
 - Desejáveis:
-- React Hooks
-- React Router
-- Testes unitários
-- Transpiladores JS
-- Redux/Immutable
+- React Hooks OK
+- React Router OK
+- Testes unitários X
+- Transpiladores JS X
+- Redux/Immutable X
